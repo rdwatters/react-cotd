@@ -133,7 +133,7 @@ class Inventory extends React.Component {
       </div>
     )
   }
-
+  //static shows it will be the same for every single instance
   static propTypes = {
     fishes: React.PropTypes.object.isRequired,
     updateFish: React.PropTypes.func.isRequired,

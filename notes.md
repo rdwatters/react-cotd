@@ -23,3 +23,38 @@ Can deploy to now.sh, which will give you a new URL every time you you redeploy 
 Running `ns --cmd "list ./content -s"` will take care of this. Now.sh puts our build directory in a folder called "content." The `-s` denotes "single page" for single-page application.
 
 ### GitHub Pages
+
+Didn't watch this.
+
+### Future React Today - Property Initializers
+
+For example, in our constructor function, we currently have to write the following to bind "this".
+
+```javascript
+this.loadSamples = this.loadSamples.bind(this);
+```
+
+And our function is as follows:
+
+```javascript
+loadSamples() {
+    this.setState({
+      fishes: sampleFishes
+    });
+  }
+```
+
+We can use fat arrow functions to bind "this"; this is called a "property initializer":
+
+```js
+loadSamples = () => {
+   this.setState({
+      fishes: sampleFishes
+   });
+};
+```
+
+**NOTE:** You *need to put a semicolon at the end of the declaration.*
+
+This would allow you to completely remove `this.loadSamples = this.loadSamples.bind(this)` from the constructor function.
+
